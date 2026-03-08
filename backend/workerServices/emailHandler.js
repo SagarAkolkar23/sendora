@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
-import pool from "../../../config/db.js";
-import { emailResultQueue } from "../../../config/redis.js";
-import { createTransport } from "../../worker/utils/mailer.js";
+import pool from "../config/db.js";
+import { emailResultQueue } from "../queues/emailQueue.js";
+import { createTransport } from "../providers/mailer.js";
 
 dotenv.config();
 

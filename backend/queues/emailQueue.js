@@ -9,3 +9,7 @@ export const emailQueue = new Queue("emailQueue", {
   connection,
 });
 
+
+export const emailResultQueue = new Queue("emailResultQueue", {
+  connection,
+});

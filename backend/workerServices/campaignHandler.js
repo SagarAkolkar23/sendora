@@ -3,13 +3,7 @@ import csv from "csv-parser";
 import pool from "../config/db.js";
 import { emailQueue } from "../queues/emailQueue.js";
 
-function renderTemplate(template, variables) {
-  let result = template;
-  for (const [key, value] of Object.entries(variables)) {
-    result = result.replaceAll(`{{${key}}}`, String(value ?? ""));
-  }
-  return result;
-}
+
 
 export async function campaignHandler(job) {
   const { campaignId, userId } = job.data;
